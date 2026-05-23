@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photography Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Photography by Michael</h1>
+      <p>Capture moments, tell stories, and explore light through every frame.</p>
+      <button id="scrollGallery" class="primary-button">View Gallery</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="container intro-section">
+      <div>
+        <h2>Welcome to the photo studio</h2>
+        <p>Discover landscapes, portraits, and still life compositions with an interactive gallery. Use the tags to filter the collection and click any photo to enlarge it.</p>
+      </div>
+      <div class="feature-cards">
+        <article>
+          <h3>Landscape</h3>
+          <p>Wide views, dramatic skies, and natural light that transforms every scene.</p>
+        </article>
+        <article>
+          <h3>Portrait</h3>
+          <p>Authentic expressions, mood, and emotion captured in unforgettable portraits.</p>
+        </article>
+        <article>
+          <h3>Travel</h3>
+          <p>Vibrant streets, hidden details, and cultural snapshots from journeys around the world.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container gallery-section" id="gallerySection">
+      <div class="section-header">
+        <h2>Photo Gallery</h2>
+        <div class="filter-buttons">
+          <button class="filter-button active" data-category="all">All</button>
+          <button class="filter-button" data-category="landscape">Landscape</button>
+          <button class="filter-button" data-category="portrait">Portrait</button>
+          <button class="filter-button" data-category="travel">Travel</button>
+        </div>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid"></div>
+      <div class="gallery-actions">
+        <button id="loadMore" class="load-more-button">Load more photos</button>
+      </div>
+    </section>
+
+    <section class="container tips-section">
+      <h2>Photography Tips</h2>
+      <div class="tip-list">
+        <article>
+          <h3>Find the light</h3>
+          <p>Time of day and direction of light are the most powerful tools for creating atmosphere and mood.</p>
+        </article>
+        <article>
+          <h3>Frame intentionally</h3>
+          <p>Think about composition, leading lines, and how each element supports your story.</p>
+        </article>
+        <article>
+          <h3>Practice patience</h3>
+          <p>Great shots often come from waiting for the right expression, weather, or detail.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="lightbox" class="lightbox hidden">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-content">
+      <button id="closeLightbox" class="close-button" aria-label="Close preview">×</button>
+      <img id="lightboxImage" alt="Expanded photo preview" />
+      <p id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>Photography page built with HTML, CSS, and JavaScript.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
